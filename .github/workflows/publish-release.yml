@@ -1,16 +1,17 @@
+name: Release
+
 on:
   push:
     tags:
-      - '*'
-name: Publish Release
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
       - name: Create GitHub release
-        uses: Roang-zero1/github-create-release-action@master
+        uses: Roang-zero1/github-create-release-action@v3
         with:
-          version_regex: ^[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
-          prerelease_regex: "^3\\.[[:digit:]]+\\.[[:digit:]]+\\.[[:digit:]]+"
+          version_regex: ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
