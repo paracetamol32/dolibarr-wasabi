@@ -9,7 +9,7 @@ RUN apt-get update && \
 
 RUN pwsh -Command "Set-PSRepository -Name PSGallery -InstallationPolicy Trusted"
 RUN pwsh -Command "Install-Module -Name AWSPowerShell.NetCore"
-RUN pwsh -Command "Install-Module -Name MySql.Data -Force"
+RUN pwsh -Command "Install-Module -Name SimplySql"
 
 CMD ["pwsh"]
 
