@@ -10,6 +10,7 @@ RUN apk update && apk add --no-cache \
 
 # Téléchargement et installation de PowerShell Core
 RUN curl -sSL -o /tmp/powershell.tar.gz https://github.com/PowerShell/PowerShell/releases/download/v7.1.4/powershell-7.1.4-linux-alpine-x64.tar.gz
+RUN mkdir /opt/microsoft/powershell
 RUN tar -xzf /tmp/powershell.tar.gz -C /opt/microsoft/powershell
 RUN rm /tmp/powershell.tar.gz
 
