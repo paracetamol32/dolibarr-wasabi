@@ -35,7 +35,7 @@ ENV PATH=$PATH:/opt/microsoft/powershell
 
 RUN pwsh -Command "Set-PSRepository -Name PSGallery -InstallationPolicy Trusted"
 RUN pwsh -Command "Install-Module -Name AWS.Tools.Installer"
-RUN pwsh -Command "Install-AWSToolsModule AWS.Tools.S3 -CleanUp"
+RUN pwsh -Command "Install-AWSToolsModule AWS.Tools.S3 -CleanUp -force"
 RUN pwsh -Command "Install-Module -Name SimplySql"
 # Copie de votre script PowerShell dans l'image
 COPY /app/script.ps1 /app/script.ps1
