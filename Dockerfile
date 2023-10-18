@@ -16,7 +16,7 @@ RUN tar -xzf /tmp/powershell.tar.gz -C /opt/microsoft/powershell
 RUN rm /tmp/powershell.tar.gz
 
 # Ajout de PowerShell Core au chemin d'accès
-ENV PATH=$PATH:/opt/microsoft/powershell/7.1.4
+RUN ENV PATH=$PATH:/opt/microsoft/powershell/7.1.4
 
 # Installation du module AWS pour PowerShell
 
