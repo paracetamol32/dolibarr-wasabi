@@ -22,7 +22,7 @@ RUN pwsh -Command "Set-PSRepository -Name PSGallery -InstallationPolicy Trusted"
 RUN pwsh -c "Install-Module -Name AWS.Tools -Force -Scope AllUsers"
 RUN pwsh -Command "Install-Module -Name SimplySql"
 # Copie de votre script PowerShell dans l'image
-COPY script.ps1 /app/script.ps1
+COPY /app/script.ps1 /app/script.ps1
 
 # Commande par défaut pour exécuter le script PowerShell
 CMD [ "pwsh", "/app/script.ps1" ]
