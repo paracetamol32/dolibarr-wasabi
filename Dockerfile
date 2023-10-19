@@ -40,5 +40,5 @@ RUN pwsh -Command "Install-Module -Name SimplySql"
 # Copie de votre script PowerShell dans l'image
 COPY /app/script.ps1 /app/script.ps1
 
-# Commande par défaut pour exécuter le script PowerShell
+# Commande par défaut pour exécuter le script PowerShell vide
 CMD [ "pwsh"]
