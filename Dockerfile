@@ -19,6 +19,7 @@ RUN apk update && apk add --no-cache \
     userspace-rcu \
     zlib \
     icu-libs  \
+    mariadb-client  \
     curl
 
 # Téléchargement et installation de PowerShell Core
